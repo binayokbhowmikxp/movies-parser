@@ -17,7 +17,7 @@ node('workers'){
     }
     
     stage('Security Tests'){
-          imageTest.inside(‘-u root:root’){
+          imageTest.inside{
              sh 'nancy /go/src/github/mlabouardy/movies-parser/Gopkg.lock'
            }
     }    
